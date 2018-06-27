@@ -6,9 +6,11 @@
   <meta name="Author" content="">
   <meta name="Keywords" content="">
   <meta name="Description" content="">
-  <title>테스트</title>
+  <title>soo's 퍼블리셔</title>
   <link rel="stylesheet" href="./src/css/index.css">
-  <script type="text/javascript" src="./src/js/index.js"></script>
+  <link rel="stylesheet" href="./src/css/owl.carousel.min.css">
+  <script type="text/javascript" src="./src/js/jquery.min.js"></script>
+  <script type="text/javascript" src="./src/js/owl.carousel.min.js"></script>
   <script type="text/javascript" src="./src/js/index.js"></script>
 </head>
 
@@ -21,7 +23,7 @@
             <img src="./src/images/logo.png" alt="Soo">
           </a>
         </h1>
-        <nav>
+        <nav class="plora-nav">
           <ul>
             <li>
               <a href="#hello">Hello</a>
@@ -58,14 +60,15 @@
           </div>
         </div>
       </section>
-      <section id="about">
+      <section id="about" class="active">
         <div class="plora-contents">
           <div class="plora-title">
             <h2>About Me</h2>
           </div>
           <div class="plora-cont">
             <p>안녕하세요. 인터랙티브 퍼블리셔 안수미입니다.</p>
-            <p>항상 발전 가능성있고, 사람들과의 커뮤니케이션을 중요하게 여기며, </p>
+            <p>항상 발전 가능성있고,</p>
+            <p>사람들과의 커뮤니케이션을 중요하게 여기며,</p>
             <p>꼼꼼하게 일하는 프론트 전문가가 되겠습니다.</p>
           </div>
         </div>
@@ -95,14 +98,41 @@
             <h2>Portfolio</h2>
           </div>
           <div class="plora-cont">
-            <div class="plora-folio-slider">
-              <ul>
-                <li><a href="http://soo27.cafe24.com/">PDsoft</a></li>
-                <li><a href="http://soo27.cafe24.com/">Cafe24</a></li>
-                <li><a href="http://soo27.cafe24.com/">ENPgames</a></li>
-                <li><a href="http://soo27.cafe24.com/">Pearlabyss</a></li>
-                <li><a href="http://soo27.cafe24.com/">SewonIT</a></li>
-              </ul>
+            <div class="plora-folio-slider owl-carousel owl-theme">
+                <div class="item folio-pd">
+                  <div class="folio-image"><img src="../src/images/hanjeon.png" alt="pdsoft 포트폴리오"></div>
+                  <a href="http://soo27.cafe24.com/">
+                    <p><strong>PDsoft</strong></p>
+                  </a>
+                </div>
+                <div class="item folio-cafe">
+                  <div class="folio-image"><img src="../src/images/mobile.png" alt="Cafe24 포트폴리오"></div>
+                  <a href="http://soo27.cafe24.com/">
+                      <p><strong>Cafe24</strong></p>
+                  </a>
+                </div>
+                <div class="item folio-enp">
+                  <div class="folio-image"><img src="../src/images/aor.png" alt="ENPgames 포트폴리오"></div>
+                  <a href="http://soo27.cafe24.com/">
+
+                        <p><strong>  ENPgames</strong></p>
+                  </a>
+                </div>
+                <div class="item folio-pearl">
+                  <div class="folio-image"><img src="../src/images/bdmobile.jpg" alt="Pearlabyss 포트폴리오"></div>
+                  <a href="http://soo27.cafe24.com/">
+
+
+                          <p><strong>Pearlabyss</strong></p>
+                  </a>
+                </div>
+                <div class="item folio-sewon">
+                  <div class="folio-image"><img src="../src/images/kcg.jpg" alt="SewonIT 포트폴리오"></div>
+                  <a href="http://soo27.cafe24.com/">
+
+                          <p><strong>SewonIT</strong></p>
+                  </a>
+                </div>
             </div>
           </div>
         </div>

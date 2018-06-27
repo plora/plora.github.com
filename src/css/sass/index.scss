@@ -278,11 +278,11 @@ section{
   z-index:20;
   .plora-title{
     margin:12vh 0 0;
-    font-size: 1.5rem;
     h2{
       display: inline-block;
       line-height: 2em;
       border-bottom: 1px solid #060606;
+      font-size: 2.25rem;
       font-weight: 300;
       letter-spacing: 0.5rem;
     }
@@ -306,40 +306,7 @@ section{
     float: left;
     padding: 0 0 0 2%;
   }
-  nav{
-    float: right;
-    padding: 0 2% 0 0;
-    ul{
-      width: 100%;
-      float: right;
-    }
-    li{
-      float: left;
-      line-height: 35px;
-      &:first-child{
-        a{
-          padding-left: 0;
-        }
-      }
-      a{
-        display: block;
-        padding: 0 0 0 20px;
-        color: $defc;
-        text-decoration: none;
-        &:hover{
-          color: #ee3b16;
-        }
-      }
-      &.active{
-        a{
-          color: #ee3b16;
-        }
-      }
-    }
-
-  }
 }
-
 #plora-container{
   position:relative;
   z-index:1;
@@ -347,12 +314,44 @@ section{
 #plora-footer{
   position:relative;
   @include size($w:$defW);
-  font-size:15px;
+  line-height: 1.25em;
   background-color: #000;
   z-index:10;
   .plora-contents{
     color: rgba(255,255,255,0.8);
-    padding:15px 0;
+    padding:5vh 0;
+  }
+}
+
+.plora-nav{
+  float: right;
+  padding: 0 2% 0 0;
+  ul{
+    width: 100%;
+    float: right;
+  }
+  li{
+    float: left;
+    line-height: 35px;
+    &:first-child{
+      a{
+        padding-left: 0;
+      }
+    }
+    a{
+      display: block;
+      padding: 0 0 0 20px;
+      color: $defc;
+      text-decoration: none;
+      &:hover{
+        color: #ee3b16;
+      }
+    }
+    &.active{
+      a{
+        /*color: #ee3b16;*/
+      }
+    }
   }
 }
 
@@ -363,10 +362,42 @@ section{
   background-repeat: no-repeat;
   background-position: 50% 50%;
   .plora-main-slider{
-    margin: 12vh 0 0;
+    display: inline-block;
+    overflow: hidden;
+    height:100px;
+    position: relative;
+    margin: 38vh 0 0;
+    padding: 0 70px 0 50px;
+    color: #fff;
+    font-size: 4rem;
+    line-height:100px;
+    &:before{
+      content: "{";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: #fff;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+    &:after{
+      content: "};";
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: #fff;
+      font-size: 5rem;
+      font-weight: 500;
+    }
+    ul{
+      position: relative;
+      li{
+        line-height: 100px;
+      }
+    }
   }
   .plora-btn{
-    margin: 10vh 0 0;
+    margin: 20vh 0 0;
     p{
       width: 120px;
       border: 1px solid #fff;
@@ -384,6 +415,20 @@ section{
         background-color: rgba(255,255,255,0.1);
       }
     }
+  }
+}
+
+#about{
+  &.active{
+    .plora-contents{
+      background-image: url('../images/bg_about.png');
+      background-repeat: no-repeat;
+      background-position: 50% bottom;
+      background-size: 50% auto;
+    }
+  }
+  .plora-cont{
+    margin-bottom: 30%;
   }
 }
 #skill{
@@ -431,6 +476,68 @@ section{
         color: #ee3b16;
         background-color: rgba(255,255,255,1);
         @include translate($x:0,$y:-10%);
+      }
+    }
+  }
+}
+
+#folio{
+  .plora-cont{
+    padding:0 2%;
+  }
+  .plora-folio-slider{
+    margin: 7% 0 10%;
+    .item{
+      position: relative;
+      overflow: hidden;
+      height: 210px;
+    }
+    .folio-image{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 0;
+      margin: -75px 0 0 -50%;
+      @include size($w:$defW,$h:150px);
+      img{
+        height:100%;
+        display: block;
+      }
+    }
+    a{
+      position: relative;
+      display: block;
+      padding: 180px 0 0;
+      z-index: 10;
+
+      &:before{
+        content: "";
+        display: block;
+        opacity: 0;
+        @include position($type:absolute,$top:0,$left:0);
+        @include size($w:$defW,$h:$defW);
+        background-color: #ee3b16;
+        z-index: 0;
+      }
+      &:hover{
+        text-decoration: none;
+        color: #fff;
+        &:before{
+          opacity: 1;
+        }
+        p{
+          @include translate($x:0,$y:-50%);
+        }
+      }
+      p{
+        position: relative;
+        line-height: 1.5em;
+        @include transition($duration:0.3s,$easing:linear);
+        @include translate($x:0,$y:0);
+        z-index: 10;
+        strong{
+          font-weight: 300;
+        }
       }
     }
   }
@@ -506,7 +613,26 @@ section{
 }
 
 /* mobile */
-@media screen and (max-width:1200px) {
-  section{
+@media screen and (max-width:767px) {
+
+  .plora-nav{
+    li{
+      &.active{
+        a{
+          color: $defc;
+        }
+      }
+    }
+  }
+  #about{
+
+      &.active{
+        .plora-contents{
+          background-size: 80% auto;
+        }
+      }
+      .plora-cont{
+        margin-bottom: 50%;
+      }
   }
 }
