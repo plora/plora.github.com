@@ -276,7 +276,7 @@ section {
       .plora-nav li a:hover {
         color: #ee3b16; }
     .plora-nav li.active a {
-      /*color: #ee3b16;*/ }
+      color: #ee3b16; }
 
 /* intro */
 #hello {
@@ -338,6 +338,13 @@ section {
   background-repeat: no-repeat;
   background-position: 50% bottom;
   background-size: 50% auto; }
+
+#about .plora-contents {
+  background: transparent;
+  background-position: 50% 200%;
+  transition: all 0.8s cubic-bezier(0.23, 0.82, 0.23, 0.82) 0s;
+  -webkit-transition: all 0.8s cubic-bezier(0.23, 0.82, 0.23, 0.82) 0s;
+  -moz-transition: all 0.8s cubic-bezier(0.23, 0.82, 0.23, 0.82) 0s; }
 
 #about .plora-cont {
   margin-bottom: 30%; }
@@ -405,16 +412,18 @@ section {
     overflow: hidden;
     height: 210px; }
   #folio .plora-folio-slider .folio-image {
+    overflow: hidden;
     position: absolute;
     left: 50%;
     top: 50%;
     z-index: 0;
-    margin: -75px 0 0 -50%;
     width: 100%;
-    height: 150px; }
+    height: 150px;
+    line-height: 150px;
+    margin: -75px 0 0 -50%; }
     #folio .plora-folio-slider .folio-image img {
-      height: 100%;
-      display: block; }
+      display: inline;
+      vertical-align: middle; }
   #folio .plora-folio-slider a {
     position: relative;
     display: block;
@@ -456,6 +465,13 @@ section {
       z-index: 10; }
       #folio .plora-folio-slider a p strong {
         font-weight: 300; }
+  #folio .plora-folio-slider .owl-nav {
+    margin: 5% 0 0; }
+    #folio .plora-folio-slider .owl-nav div {
+      display: inline-block;
+      margin: 0 0 0 5%; }
+      #folio .plora-folio-slider .owl-nav div:first-child {
+        margin-left: 0; }
 
 #contact {
   height: auto;

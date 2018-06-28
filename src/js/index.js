@@ -2,16 +2,18 @@
 
 var plora = {};
 (function () {
-  plora.main = {
+  /*plora.main = {
     slider: $(".plora-main-slider"),
     default: 0
-  }, plora.Events = function () {
+  }, object property add */
+  plora.Events = function () {
     //button scroll
     var scroll = $('html, body'),
         scrollOffset = Math.ceil(scroll.scrollTop() / $("#wrap").height() * 100),
         scrollBottom = Math.ceil(($(document).height() - $(window).height()) / $("#wrap").height() * 100);
 
     onScrollMove(scrollOffset);
+    onScrollBg(scrollOffset);
 
     $('.plora-nav a, .plora-btn a[href^="#"]').on('click', function () {
       var href = $.attr(this, 'href');
@@ -26,9 +28,9 @@ var plora = {};
       return false;
     });
 
-    //section scrollTop
+    //nav scrollTop
     function onScrollMove(scrollOffset) {
-      console.log(scrollOffset);
+      //console.log(scrollOffset);
       if (scrollOffset >= 0 && scrollOffset < 27) {
         $(".plora-nav li").removeClass("active");
         $(".plora-nav li").eq(0).addClass("active");
@@ -46,9 +48,20 @@ var plora = {};
         $(".plora-nav li").eq(4).addClass("active");
       }
     }
-    $("html, body").on('mousewheel DOMMouseScroll', function (e) {
+    //section scrollTop
+    function onScrollBg(scrollOffset) {
+      if (scrollOffset >= 10 && scrollOffset < 50) {
+        $("#plora-container section").removeClass("active");
+        $("#plora-container section").eq(1).addClass("active");
+      } else {
+        $("#plora-container section").removeClass("active");
+      }
+    }
+
+    $(window).scroll(function () {
       scrollOffset = Math.ceil($(this).scrollTop() / $("#wrap").height() * 100);
       onScrollMove(scrollOffset);
+      onScrollBg(scrollOffset);
     });
   }, plora.functions = {
     init: function init() {
