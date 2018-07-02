@@ -641,6 +641,20 @@ section{
       }
     }
   }
+
+  /* intro */
+  #hello{
+    .plora-main-slider{
+      font-size: 2rem;
+      &:before{
+        font-size: 3rem;
+      }
+      &:after{
+        font-size: 3rem;
+      }
+    }
+  }
+
   #about{
 
       &.active{

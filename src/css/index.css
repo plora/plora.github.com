@@ -556,6 +556,13 @@ section {
 @media screen and (max-width: 767px) {
   .plora-nav li.active a {
     color: #555; }
+  /* intro */
+  #hello .plora-main-slider {
+    font-size: 2rem; }
+    #hello .plora-main-slider:before {
+      font-size: 3rem; }
+    #hello .plora-main-slider:after {
+      font-size: 3rem; }
   #about.active .plora-contents {
     background-size: 80% auto; }
   #about .plora-cont {
