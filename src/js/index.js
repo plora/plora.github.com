@@ -31,16 +31,16 @@ var plora = {};
     //nav scrollTop
     function onScrollMove(scrollOffset) {
       //console.log(scrollOffset);
-      if (scrollOffset >= 0 && scrollOffset < 27) {
+      if (scrollOffset >= 0 && scrollOffset < 25) {
         $(".plora-nav li").removeClass("active");
         $(".plora-nav li").eq(0).addClass("active");
-      } else if (scrollOffset >= 27 && scrollOffset < 50) {
+      } else if (scrollOffset >= 25 && scrollOffset < 48) {
         $(".plora-nav li").removeClass("active");
         $(".plora-nav li").eq(1).addClass("active");
-      } else if (scrollOffset >= 50 && scrollOffset < 66) {
+      } else if (scrollOffset >= 48 && scrollOffset < 64) {
         $(".plora-nav li").removeClass("active");
         $(".plora-nav li").eq(2).addClass("active");
-      } else if (scrollOffset >= 66 && scrollOffset < scrollBottom) {
+      } else if (scrollOffset >= 64 && scrollOffset < scrollBottom) {
         $(".plora-nav li").removeClass("active");
         $(".plora-nav li").eq(3).addClass("active");
       } else if (scrollOffset >= scrollBottom) {
