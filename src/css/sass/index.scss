@@ -59,7 +59,6 @@ $defc: #555;
   -moz-animation: $time $state $easing $repeat $time2;
 }
 /* reset */
-
 * {
   @include mpag($m:0,$p:0);
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -150,7 +149,6 @@ q:before {
   content: "'";
 }
 /* base */
-
 a {
   color: $defc;
   text-decoration: none;
@@ -202,7 +200,6 @@ textarea {
   line-height: 1em;
 }
 /* access */
-
 .hide {
   @include position($type:absolute,$left:-9999px);
   visibility: hidden;
@@ -211,7 +208,6 @@ textarea {
   line-height: 0;
 }
 /* ir */
-
 .ir {
   display: block;
   @include size($w:$defW,$h:$defW);
@@ -221,12 +217,10 @@ textarea {
   //background:url('../images/bg.png') 0 0 no-repeat;
 }
 /*clear*/
-
 .clearfix:after {
   @include clear($ct:"",$dis:block);
 }
 /* tab */
-
 .tab {
   @include size($w:0,$h:129px);
 
@@ -259,7 +253,6 @@ textarea {
   @include clear($ct: "", $dis: block);
 }
 /* iframe */
-
 iframe {
   border: none;
 }
@@ -268,7 +261,6 @@ iframe[name='google_conversion_frame'] {
   @extend .hide;
 }
 /* button */
-
 div.plora-btn {
   @include size($w:$defW);
   text-align: center;
@@ -284,11 +276,10 @@ div.plora-btn {
 }
 
 p.plora-btn {
-  @include size($w:120px,$h:40px);
-  line-height: 40px;
+  @include size($w:6em,$h:2.5em);
+  line-height: 2.5em;
   position: absolute;
   color: #555;
-  font-size: 18px;
   text-align: center;
   background: #f8f8f8;
   border: 1px solid #d0d0d0;
@@ -301,7 +292,6 @@ p.plora-btn {
   }
 }
 /* layout */
-
 #wrap {
   overflow: hidden;
   position: relative;
@@ -421,7 +411,6 @@ section {
   }
 }
 /* intro */
-
 #hello {
   height: 100vh;
   background-image: url("../images/bg_main.jpg");
@@ -799,6 +788,7 @@ section {
     .plora-btn {
       bottom: 2em;
       right: 10px;
+      font-size: 0.75em;
       margin-right: 0;
     }
   }
