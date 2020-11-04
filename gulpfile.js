@@ -18,7 +18,7 @@ var webserver = require('gulp-webserver');
 var sassFiles = './src/css/sass/**/*.scss',
     cssDest = './src/css/';
 
-gulp.task('styles', function(){
+gulp.task('styles', async function(){
     gulp.src(sassFiles)
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(cssDest));
@@ -36,8 +36,8 @@ gulp.task('babel', function() {
 //WATCH
 gulp.task('watch', function() {
   gulp.watch(['./*.*']);
-  gulp.watch(sassFiles,['styles']);
-  gulp.watch(jsFiles, ['babel']);
+  gulp.watch(sassFiles,gulp.series('styles'));
+  gulp.watch(jsFiles, gulp.series('babel'));
   //  gulp.watch(sassFiles,['styles']);
 });
 
@@ -49,4 +49,4 @@ gulp.task('webserver', function() {
     })
   );
 });
-gulp.task('default', ['watch', 'webserver']);
+gulp.task('default', gulp.parallel('watch', 'webserver'));
