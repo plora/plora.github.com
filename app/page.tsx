@@ -1,22 +1,19 @@
-import Hello from '../components/Hello/Hello'
-import About from '../components/About/About'
-import Skill from '../components/Skill/Skill'
-import Folio from '../components/Folio/Folio'
-import Contact from '../components/Contact/Contact'
+import type { Metadata } from 'next'
+import Hero from '../components/MainLanding/Hero/Hero'
+import ProjectBentoGrid from '../components/MainLanding/ProjectBentoGrid/ProjectBentoGrid'
+import CollaborationCTA from '../components/MainLanding/CollaborationCTA/CollaborationCTA'
+
+export const metadata: Metadata = {
+  title: "Soo's Portfolio",
+  description: '웹표준과 접근성을 지키며 사용자 경험을 설계하는 인터랙티브 퍼블리셔 안수미의 포트폴리오',
+}
 
 export default function HomePage() {
   return (
-    <main id="plora-container">
-      <Hello />
-      <About />
-      <Skill />
-      <Folio />
-      <Contact />
-      <footer id="plora-footer">
-        <div className="plora-contents">
-          <p>Copyright © 2018 Sumi. All Rights Reserved.</p>
-        </div>
-      </footer>
-    </main>
+    <>
+      <Hero />
+      <ProjectBentoGrid />
+      <CollaborationCTA />
+    </>
   )
 }

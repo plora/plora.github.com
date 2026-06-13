@@ -1,0 +1,213 @@
+.hero {
+  position: relative;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  padding-top: var(--header-height);
+  background: var(--color-surface);
+}
+
+.inner {
+  position: relative;
+  max-width: var(--container-max);
+  width: 100%;
+  margin: 0 auto;
+  padding: var(--space-16) var(--space-6);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-16);
+  align-items: center;
+  z-index: 1;
+}
+
+/* ── Text column ── */
+
+.content {
+  animation: fade-in 0.8s ease both;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2);
+  padding: var(--space-1) var(--space-3);
+  background: #ebe3c1;
+  color: #5b573d;
+  border-radius: 9999px;
+  font-family: var(--font-body);
+  font-size: var(--text-xs);
+  font-weight: 500;
+  margin-bottom: var(--space-6);
+}
+
+.badgeDot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--color-primary);
+  flex-shrink: 0;
+  animation: pulse 2s ease-in-out infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation: none;
+  }
+}
+
+.headline {
+  font-family: var(--font-headline);
+  font-size: var(--text-5xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-6);
+
+  span {
+    color: var(--color-primary);
+  }
+}
+
+.subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-lg);
+  color: var(--color-text-secondary);
+  line-height: 1.75;
+  margin-bottom: var(--space-8);
+  max-width: 480px;
+}
+
+.cta {
+  display: flex;
+  gap: var(--space-4);
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-8);
+  background: var(--color-primary);
+  color: var(--color-on-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition:
+    background var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
+
+  &:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px -5px rgba(58, 103, 88, 0.25);
+    color: var(--color-on-primary);
+    text-decoration: none;
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+.ctaSecondary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-3) var(--space-8);
+  background: var(--color-surface-container);
+  color: var(--color-text-primary);
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: var(--text-sm);
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: background var(--transition-fast);
+
+  &:hover {
+    background: var(--color-border);
+    text-decoration: none;
+    color: var(--color-text-primary);
+  }
+}
+
+/* ── Visual column ── */
+
+.visual {
+  position: relative;
+}
+
+.visualBg {
+  position: absolute;
+  inset: -10%;
+  background: linear-gradient(
+    135deg,
+    rgba(231, 214, 254, 0.5) 0%,
+    rgba(167, 215, 197, 0.5) 100%
+  );
+  filter: blur(48px);
+  transform: rotate(-6deg) scale(1.05);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.imgBlob {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  overflow: hidden;
+  box-shadow: 0 24px 64px -12px rgba(26, 26, 46, 0.15);
+  z-index: 1;
+}
+
+/* ── Animations ── */
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.35;
+  }
+}
+
+/* ── Responsive ── */
+
+@media screen and (max-width: 1024px) {
+  .inner {
+    gap: var(--space-10);
+  }
+
+  .headline {
+    font-size: var(--text-4xl);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    grid-template-columns: 1fr;
+    padding: var(--space-12) var(--space-5);
+    gap: var(--space-10);
+  }
+
+  .content {
+    order: 1;
+  }
+
+  .visual {
+    order: 2;
+    max-width: 420px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .headline {
+    font-size: var(--text-3xl);
+  }
+}
