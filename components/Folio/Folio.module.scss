@@ -1,0 +1,128 @@
+.folio {
+  .cont {
+    padding: 0 2%;
+  }
+
+  .plora-btn {
+    width: 6em;
+    height: 2.5em;
+    line-height: 2.5em;
+    position: absolute;
+    color: #555;
+    text-align: center;
+    background: #f8f8f8;
+    border: 1px solid #d0d0d0;
+    z-index: 2;
+    bottom: 2em;
+    right: 50%;
+    margin-right: -60px;
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      padding: 0;
+      text-decoration: none;
+
+      &::before {
+        display: none;
+      }
+
+      &:hover {
+        color: #555;
+      }
+    }
+  }
+
+  .plora-folio-slider {
+    margin: 7% 0 10%;
+
+    :global(.swiper-button-prev),
+    :global(.swiper-button-next) {
+      color: #555;
+      transition: color 0.3s linear;
+
+      &::after {
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+
+      &:hover {
+        color: #ee3b16;
+      }
+    }
+  }
+
+  .item {
+    position: relative;
+    overflow: hidden;
+    height: 210px;
+  }
+
+  .folio-image {
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 0;
+    width: 100%;
+    height: 150px;
+    line-height: 150px;
+    margin: -75px 0 0 -50%;
+  }
+
+  a {
+    position: relative;
+    display: block;
+    padding: 180px 0 0;
+    z-index: 10;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      display: block;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #ee3b16;
+      z-index: 0;
+      transition: opacity 0.3s linear;
+    }
+
+    &:hover {
+      color: #fff;
+
+      &::before {
+        opacity: 1;
+      }
+
+      p {
+        transform: translate(0, -50%);
+      }
+    }
+
+    p {
+      position: relative;
+      line-height: 1.5em;
+      transition: all 0.3s linear 0s;
+      transform: translate(0, 0);
+      z-index: 10;
+
+      strong {
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .folio .plora-btn {
+    bottom: 2em;
+    right: 10px;
+    font-size: 0.75em;
+    margin-right: 0;
+  }
+}
