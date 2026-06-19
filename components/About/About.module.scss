@@ -1,0 +1,30 @@
+.about {
+  &:global(.active) .plora-contents {
+    background-image: url('/images/bg_about.png');
+    background-repeat: no-repeat;
+    background-position: 50% bottom;
+    background-size: 50% auto;
+  }
+
+  :global(.plora-contents) {
+    background: transparent;
+    background-position: 50% 200%;
+    transition: all 0.8s cubic-bezier(0.23, 0.82, 0.23, 0.82) 0s;
+  }
+
+  .cont {
+    margin-bottom: 30%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    &:global(.active) :global(.plora-contents) {
+      background-size: 80% auto;
+    }
+
+    .cont {
+      margin-bottom: 50%;
+    }
+  }
+}

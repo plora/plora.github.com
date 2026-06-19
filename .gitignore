@@ -10,6 +10,8 @@
 
 # production
 /build
+/.next
+/dist
 
 # misc
 .DS_Store
@@ -85,3 +87,16 @@ node_modules/
 # dotenv environment variables file
 .env
 *.code-workspace
+
+# editor
+.vscode/
+
+# ai
+.harness/
+.agents/
+.cursor/
+.claude/
+.codex/
+.specify/
+docs/
+specs/

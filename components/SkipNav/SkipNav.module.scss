@@ -1,0 +1,30 @@
+.skip-nav {
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 360px;
+  text-align: center;
+  z-index: 100;
+
+  a {
+    display: block;
+    width: 0;
+    height: 0;
+    color: #fff;
+    font-size: 0;
+    line-height: 0;
+    background: #333;
+    clip: rect(0, 0, 0, 0);
+
+    &:active,
+    &:focus {
+      width: 100%;
+      height: auto;
+      font-size: 1.2rem;
+      line-height: 2em;
+      clip: auto;
+    }
+  }
+}

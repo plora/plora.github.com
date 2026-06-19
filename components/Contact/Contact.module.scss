@@ -1,0 +1,40 @@
+.contact {
+  height: auto;
+  background-color: #000;
+
+  h2 {
+    color: #fff;
+  }
+
+  :global(.plora-title) {
+    margin-top: 5%;
+  }
+
+  .cont {
+    display: table;
+    width: 100%;
+    height: 150px;
+
+    dl {
+      display: table-cell;
+      width: 33.3%;
+      height: 100%;
+      vertical-align: middle;
+      color: rgba(255, 255, 255, 0.5);
+      transition: all 0.3s linear 0s;
+
+      a {
+        color: rgba(255, 255, 255, 0.5);
+        transition: all 0.3s linear 0s;
+      }
+
+      &:hover {
+        color: white;
+
+        a {
+          color: white;
+        }
+      }
+    }
+  }
+}

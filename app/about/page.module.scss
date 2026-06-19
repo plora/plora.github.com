@@ -1,0 +1,34 @@
+.page {
+  padding-top: var(--header-height);
+  min-height: 100vh;
+  background: var(--color-surface);
+}
+
+.sections {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6) var(--space-16);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.skillSection {
+  padding: var(--space-12) 0;
+}
+
+.sectionTitle {
+  font-family: var(--font-headline);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-8);
+}
+
+@media screen and (max-width: 768px) {
+  .sections {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
