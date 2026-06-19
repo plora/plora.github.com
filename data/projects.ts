@@ -16,63 +16,70 @@ export const PROJECTS: Project[] = [
     id: 'hiring',
     title: '사람인 기업-채용센터',
     description: '기업 채용 담당자를 위한 채용 관리 통합 플랫폼 UI 구현',
-    categories: ['Web', 'Dashboard'],
+    categories: ['Web'],
     thumbnail: '/images/hiring.png',
     size: 'large',
     featured: true,
-    detail: '채용공고 등록부터 지원자 관리까지 기업 채용 전 과정을 지원하는 플랫폼입니다. Next.js 기반 App Router 구조로 마이그레이션하며 퍼블리싱 전반을 담당했습니다.',
+    detail:
+      '채용공고 등록부터 지원자 관리까지 기업 채용 전 과정을 지원하는 플랫폼입니다. Next.js 기반 App Router 구조로 마이그레이션하며 퍼블리싱 전반을 담당했습니다.',
     link: 'https://hiring.saramin.co.kr/home',
   },
   {
     id: 'fostiny',
     title: '포스티니',
-    description: '사람인 HR 솔루션 서비스 프론트엔드 구현 및 디자인 시스템 적용',
-    categories: ['Web', 'Dashboard'],
+    description:
+      '사람인 HR 솔루션 서비스 프론트엔드 구현 및 디자인 시스템 적용',
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/fostiny.png',
     size: 'large',
     featured: true,
-    detail: '기업 HR 업무를 통합 지원하는 SaaS 서비스입니다. 디자인 시스템 기반 컴포넌트 라이브러리 구축과 반응형 레이아웃 구현을 담당했습니다.',
+    detail:
+      '기업 HR 업무를 통합 지원하는 SaaS 서비스입니다. 디자인 시스템 기반 컴포넌트 라이브러리 구축과 반응형 레이아웃 구현을 담당했습니다.',
     link: 'https://fostiny.saramin.co.kr/',
   },
   {
     id: 'gig',
     title: '사람인 긱',
     description: '프리랜서 매칭 플랫폼 — 구직자·기업 양방향 서비스 UI',
-    categories: ['Web', 'Dashboard'],
+    categories: ['Web'],
     thumbnail: '/images/gig.png',
     size: 'small',
     featured: true,
-    detail: '긱 이코노미 트렌드에 맞춘 프리랜서 매칭 서비스입니다. 모바일 우선 접근법으로 복잡한 필터 UI와 다단계 폼을 구현했습니다.',
+    detail:
+      '긱 이코노미 트렌드에 맞춘 프리랜서 매칭 서비스입니다. 모바일 우선 접근법으로 복잡한 필터 UI와 다단계 폼을 구현했습니다.',
     link: 'https://gig.saramin.co.kr/',
   },
   {
     id: 'preview',
     title: '사람인 기업-인적성',
     description: '기업 채용 인적성 검사 플랫폼 — 응시자·관리자 UI 구현',
-    categories: ['Web', 'Dashboard'],
+    categories: ['Web'],
     thumbnail: '/images/preview.png',
     size: 'small',
-    detail: '채용 프로세스 중 인적성 검사를 지원하는 플랫폼입니다. 응시자 화면과 기업 관리자 화면을 모두 담당했습니다.',
+    detail:
+      '채용 프로세스 중 인적성 검사를 지원하는 플랫폼입니다. 응시자 화면과 기업 관리자 화면을 모두 담당했습니다.',
     link: 'https://preview.saramin.co.kr/',
   },
   {
     id: 'billing-manage',
     title: '사람인 기업-빌링관리',
-    description: '기업 서비스 이용료 및 결제 내역 관리 대시보드',
-    categories: ['Web', 'Dashboard'],
+    description: '기업 서비스 이용료 및 결제 내역 관리 플랫폼',
+    categories: ['Web'],
     thumbnail: '/images/billing-manage.jpg',
     size: 'small',
-    detail: '기업 고객의 사람인 서비스 구독 및 결제를 관리하는 어드민 대시보드입니다. 복잡한 테이블 UI와 필터 인터랙션을 담당했습니다.',
+    detail:
+      '기업 고객의 사람인 서비스 구독 및 결제를 관리하는 어드민 대시보드입니다. 복잡한 테이블 UI와 필터 인터랙션을 담당했습니다.',
     link: 'https://billing.saramin.co.kr/manage/',
   },
   {
     id: 'business',
     title: '사람인 기업-비즈니스',
     description: '사람인 기업 서비스 소개 홈페이지 — 서비스 소개 및 요금제 UI',
-    categories: ['Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/business.jpg',
     size: 'small',
-    detail: '기업 고객 대상 서비스 소개 및 요금제 안내 페이지입니다. 마케팅 랜딩 페이지 형식으로 인터랙티브한 서비스 소개 섹션을 구현했습니다.',
+    detail:
+      '기업 고객 대상 서비스 소개 및 요금제 안내 페이지입니다. 마케팅 랜딩 페이지 형식으로 인터랙티브한 서비스 소개 섹션을 구현했습니다.',
     link: 'https://business.saramin.co.kr/',
   },
   {
@@ -82,21 +89,21 @@ export const PROJECTS: Project[] = [
     categories: ['Web', 'Mobile'],
     thumbnail: '/images/calendar.png',
     size: 'small',
-    detail: '구직자가 자신의 채용 지원 일정을 한눈에 파악할 수 있는 캘린더 서비스입니다. 모바일 최적화와 직관적인 인터랙션에 집중했습니다.',
+    detail:
+      '구직자가 자신의 채용 지원 일정을 한눈에 파악할 수 있는 캘린더 서비스입니다. 모바일 최적화와 직관적인 인터랙션에 집중했습니다.',
     link: 'https://calendar.saramin.co.kr/',
   },
   {
     id: 'cover-letter',
     title: '사람인 개인-자소서',
     description: '자기소개서 작성 및 관리 플랫폼 — 에디터 UI 구현',
-    categories: ['Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/cover-letter.png',
     size: 'small',
-    detail: '구직자가 자기소개서를 작성·저장·관리할 수 있는 플랫폼입니다. 리치 텍스트 에디터 및 폼 UI를 담당했습니다.',
+    detail:
+      '구직자가 자기소개서를 작성·저장·관리할 수 있는 플랫폼입니다. 리치 텍스트 에디터 및 폼 UI를 담당했습니다.',
     link: 'https://cover-letter.saramin.co.kr/list/1',
   },
-
-  // ── 더플랩 ────────────────────────────────────────
   {
     id: 'indepth',
     title: '더플랩 인뎁스',
@@ -105,48 +112,53 @@ export const PROJECTS: Project[] = [
     thumbnail: '/images/indepth.png',
     size: 'large',
     featured: true,
-    detail: '인사·조직·리더십 분야 전문 아티클을 제공하는 미디어 플랫폼입니다. 가독성 중심 타이포그래피와 스크롤 애니메이션을 적용했습니다.',
+    detail:
+      '인사·조직·리더십 분야 전문 아티클을 제공하는 미디어 플랫폼입니다. 가독성 중심 타이포그래피와 스크롤 애니메이션을 적용했습니다.',
     link: 'https://indepth.thepllab.com/',
   },
   {
     id: 'connect',
     title: '더플랩 커넥트',
     description: 'B2B HR 네트워킹 서비스 — 마케팅 랜딩 페이지 및 서비스 소개',
-    categories: ['Web', 'Branding'],
+    categories: ['Web'],
     thumbnail: '/images/connect.png',
     size: 'small',
     featured: true,
-    detail: 'HR 전문가 네트워킹 플랫폼의 마케팅 사이트입니다. 브랜드 아이덴티티를 반영한 인터랙티브 랜딩 페이지를 구현했습니다.',
+    detail:
+      'HR 전문가 네트워킹 플랫폼의 마케팅 사이트입니다. 브랜드 아이덴티티를 반영한 인터랙티브 랜딩 페이지를 구현했습니다.',
     link: 'https://connect.thepllab.com/',
   },
   {
     id: 'insight',
     title: '더플랩 인사이트',
     description: '인사·조직 전문 콘텐츠 플랫폼 — 아티클 및 리포트 UI',
-    categories: ['Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/insight.png',
     size: 'large',
-    detail: '더플랩의 HR 전문 인사이트 콘텐츠를 제공하는 플랫폼입니다. 콘텐츠 중심의 레이아웃과 검색·필터 UI를 담당했습니다.',
+    detail:
+      '더플랩의 HR 전문 인사이트 콘텐츠를 제공하는 플랫폼입니다. 콘텐츠 중심의 레이아웃과 검색·필터 UI를 담당했습니다.',
     link: 'https://thepllab.com/',
   },
   {
     id: 'thepllab',
     title: '더플랩',
     description: 'HR 전문 기관 공식 홈페이지 — 기업 브랜딩 및 서비스 소개',
-    categories: ['Web', 'Branding'],
+    categories: ['Web'],
     thumbnail: '/images/thepllab.png',
     size: 'small',
-    detail: 'HR 전문 기관 더플랩의 공식 소개 사이트입니다. 브랜드 정체성을 반영한 UI와 애니메이션을 구현했습니다.',
+    detail:
+      'HR 전문 기관 더플랩의 공식 소개 사이트입니다. 브랜드 정체성을 반영한 UI와 애니메이션을 구현했습니다.',
     link: 'https://about.thepllab.com/',
   },
   {
     id: 'ref',
     title: '더플랩 레퍼런스',
     description: 'HR 실무 레퍼런스 큐레이션 미디어 — 아티클 리스트 UI',
-    categories: ['Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/ref.png',
     size: 'small',
-    detail: 'HR 실무자를 위한 레퍼런스 자료를 큐레이션하는 미디어 플랫폼입니다. 카드형 리스트와 태그 필터 UI를 구현했습니다.',
+    detail:
+      'HR 실무자를 위한 레퍼런스 자료를 큐레이션하는 미디어 플랫폼입니다. 카드형 리스트와 태그 필터 UI를 구현했습니다.',
     link: 'https://ref.indepth.thepllab.com/',
   },
 
@@ -155,23 +167,23 @@ export const PROJECTS: Project[] = [
     id: 'deleo',
     title: 'Deleo',
     description: '스타트업 기업 공식 홈페이지 — 서비스 소개 및 브랜딩 UI',
-    categories: ['Web', 'Branding'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/deleo.jpg',
     size: 'large',
-    detail: 'B2B 스타트업 Deleo의 공식 소개 사이트입니다. 서비스 특징을 시각적으로 전달하는 인터랙티브 랜딩 페이지를 제작했습니다.',
-    link: 'http://soo27.cafe24.com/',
+    detail:
+      'B2B 스타트업 Deleo의 공식 소개 사이트입니다. 서비스 특징을 시각적으로 전달하는 인터랙티브 랜딩 페이지를 제작했습니다.',
+    link: 'https://www.deleo.co.kr/',
   },
-
-  // ── 프리랜서 ───────────────────────────────────────
   {
     id: 'bdmobile',
     title: 'Pearlabyss 블랙사막 모바일',
     description: '글로벌 MMORPG 공식 모바일 웹사이트 반응형 퍼블리싱',
-    categories: ['Mobile', 'Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/bdmobile.jpg',
     size: 'small',
     featured: true,
-    detail: '블랙사막 모바일 글로벌 출시에 맞춰 제작된 공식 소개 사이트입니다. 다국어 레이아웃, 모바일 최적화, 인터랙티브 애니메이션을 담당했습니다.',
+    detail:
+      '블랙사막 모바일 글로벌 출시에 맞춰 제작된 공식 소개 사이트입니다. 다국어 레이아웃, 모바일 최적화, 인터랙티브 애니메이션을 담당했습니다.',
     link: 'https://www.pearlabyss.com/',
   },
   {
@@ -181,7 +193,8 @@ export const PROJECTS: Project[] = [
     categories: ['Web', 'Mobile'],
     thumbnail: '/images/mobigo.png',
     size: 'small',
-    detail: '모빌리티 플랫폼 모비고(ARC)의 공식 소개 사이트입니다. 서비스 특징을 강조하는 인터랙티브 섹션과 모바일 최적화를 담당했습니다.',
+    detail:
+      '모빌리티 플랫폼 모비고(ARC)의 공식 소개 사이트입니다. 서비스 특징을 강조하는 인터랙티브 섹션과 모바일 최적화를 담당했습니다.',
     link: 'https://www.mobigo.co.kr/',
   },
   {
@@ -191,7 +204,8 @@ export const PROJECTS: Project[] = [
     categories: ['Web'],
     thumbnail: '/images/aor.jpg',
     size: 'small',
-    detail: '게임 개발사 ENPgames의 공식 홈페이지입니다. 게임 소개, 뉴스, 회사 소개 섹션을 퍼블리싱했습니다.',
+    detail:
+      '게임 개발사 ENPgames의 공식 홈페이지입니다. 게임 소개, 뉴스, 회사 소개 섹션을 퍼블리싱했습니다.',
     link: 'http://www.pupugame.com/',
   },
   {
@@ -201,7 +215,8 @@ export const PROJECTS: Project[] = [
     categories: ['Web'],
     thumbnail: '/images/kcg.jpg',
     size: 'small',
-    detail: 'IT 솔루션 전문 기업의 공식 소개 사이트입니다. 서비스 포트폴리오와 문의 섹션을 구현했습니다.',
+    detail:
+      'IT 솔루션 전문 기업의 공식 소개 사이트입니다. 서비스 포트폴리오와 문의 섹션을 구현했습니다.',
     link: 'http://soo27.cafe24.com/anyone/kcg-index.html',
   },
   {
@@ -211,17 +226,19 @@ export const PROJECTS: Project[] = [
     categories: ['Web'],
     thumbnail: '/images/hanjeon.png',
     size: 'small',
-    detail: 'B2B IT 솔루션 기업 PDsoft의 홈페이지입니다. 제품 소개 및 기업 정보 페이지를 반응형으로 퍼블리싱했습니다.',
+    detail:
+      'B2B IT 솔루션 기업 PDsoft의 홈페이지입니다. 제품 소개 및 기업 정보 페이지를 반응형으로 퍼블리싱했습니다.',
     link: 'http://www.kepid.co.kr/kepid/index.asp',
   },
   {
     id: 'mobile',
     title: 'Cafe24 스킨',
     description: '반응형 쇼핑몰 Cafe24 스킨 퍼블리싱 — 모바일 최적화',
-    categories: ['Mobile', 'Web'],
+    categories: ['Web', 'Mobile'],
     thumbnail: '/images/mobile.jpg',
     size: 'small',
-    detail: 'Cafe24 플랫폼 기반 반응형 쇼핑몰 스킨입니다. 모바일 우선 설계와 상품 목록·상세 페이지 퍼블리싱을 담당했습니다.',
+    detail:
+      'Cafe24 플랫폼 기반 반응형 쇼핑몰 스킨입니다. 모바일 우선 설계와 상품 목록·상세 페이지 퍼블리싱을 담당했습니다.',
     link: 'http://skin-mobile6.plorasoo26.cafe24.com/',
   },
 ]
