@@ -1,6 +1,7 @@
 {
-  "name": "soo-portfolio",
+  "name": "plora",
   "version": "1.0.0",
+  "description": "",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
