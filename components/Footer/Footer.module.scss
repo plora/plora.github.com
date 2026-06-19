@@ -1,0 +1,17 @@
+.footer {
+  background: var(--color-text-primary);
+  padding: var(--space-8) 0;
+}
+
+.inner {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--space-6);
+  text-align: center;
+}
+
+.copyright {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.6);
+}
