@@ -12,15 +12,19 @@ const CATEGORY_ORDER: SkillCategory[] = [
   'JavaScript',
   'Framework',
   'Tools',
+  'Package Manager',
   'Design',
 ]
+
+const getCategoryClassName = (category: SkillCategory): string =>
+  category.replace(/\//g, '_').replace(/ /g, '_')
 
 export default function SkillChips({ skills = SKILLS, groupByCategory = true }: SkillChipsProps) {
   if (!groupByCategory) {
     return (
       <div className={styles.flat}>
         {skills.map((skill) => (
-          <span key={skill.name} className={`${styles.chip} ${styles[skill.category.replace('/', '_')]}`}>
+          <span key={skill.name} className={`${styles.chip} ${styles[getCategoryClassName(skill.category)]}`}>
             {skill.name}
           </span>
         ))}
@@ -40,7 +44,7 @@ export default function SkillChips({ skills = SKILLS, groupByCategory = true }: 
               {categorySkills.map((skill) => (
                 <span
                   key={skill.name}
-                  className={`${styles.chip} ${styles[category.replace('/', '_')]}`}
+                  className={`${styles.chip} ${styles[getCategoryClassName(category)]}`}
                 >
                   {skill.name}
                 </span>
