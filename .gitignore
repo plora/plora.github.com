@@ -100,3 +100,7 @@ node_modules/
 .specify/
 docs/
 specs/
+
+AGENTS.md
+CLAUDE.md
+DESIGN.md
